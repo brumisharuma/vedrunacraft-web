@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VedrunaCraft - Minecraft Survival Anarchy Server</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/minecraft-logo.png">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube logo-icon"></i>
+                VedrunaCraft
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="fade-in">
+                <h1>VedrunaCraft</h1>
+                <p>Experience true freedom in our Survival Anarchy server. No rules, no restrictions - just pure Minecraft survival as it was meant to be played.</p>
+                
+                <div style="margin: 2rem 0;">
+                    <button class="server-ip" onclick="copyToClipboard('wss://play.vedrunacraft.net')">
+                        <i class="fas fa-copy"></i> Copy Server IP: wss://play.vedrunacraft.net
+                    </button>
+                </div>
+                
+                <div style="margin-top: 2rem;">
+                    <a href="#join" class="btn">Join Now</a>
+                    <a href="rules.html" class="btn btn-secondary">Server Rules</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About VedrunaCraft</h2>
+            <div class="cards">
+                <div class="card fade-in">
+                    <i class="fas fa-fist-raised" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
+                    <h3>True Anarchy</h3>
+                    <p>No rules, no bans. Play Minecraft the way you want. Grief, raid, and PvP without restrictions. Only your skills limit you.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <i class="fas fa-server" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
+                    <h3>24/7 Uptime</h3>
+                    <p>Our server is always online with 99.9% uptime. Play whenever you want, from anywhere in the world.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <i class="fas fa-users" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
+                    <h3>Active Community</h3>
+                    <p>Join our growing community of anarchy players. Form alliances, start wars, or go solo - the choice is yours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section class="section" id="join" style="background: var(--darker-bg);">
+        <div class="container">
+            <h2 class="section-title">How to Join</h2>
+            <div class="cards">
+                <div class="card fade-in">
+                    <h3>1. Use Eaglercraft</h3>
+                    <p>VedrunaCraft runs on Eaglercraft, allowing you to play directly in your browser without downloading Minecraft.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <h3>2. Connect to Server</h3>
+                    <p>Open Eaglercraft and connect to our server using the IP address:</p>
+                    <code style="background: var(--dark-bg); padding: 0.5rem 1rem; border-radius: 4px; display: block; margin: 1rem 0; color: var(--light-green);">wss://play.vedrunacraft.net</code>
+                </div>
+                
+                <div class="card fade-in">
+                    <h3>3. Start Playing</h3>
+                    <p>Once connected, you're ready to play! Survive, build, raid, and conquer in our anarchy world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="color: var(--light-green); margin-bottom: 1rem;">VedrunaCraft</h3>
+                    <p style="color: var(--text-gray);">Survival Anarchy Minecraft Server</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://dsc.gg/vedrunacraft" target="_blank" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="mailto:info@vedrunacraft.net" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div>
+                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. All rights reserved.</p>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">Not affiliated with Mojang or Microsoft.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Copy IP to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const button = document.querySelector('.server-ip');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> IP Copied!';
+                button.style.background = 'var(--secondary-green)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.background = '';
+                }, 2000);
+            });
+        }
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.card, .feature, .contact-method').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
