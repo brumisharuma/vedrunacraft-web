@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Information - VedrunaCraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/minecraft-logo.png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube logo-icon"></i>
+                VedrunaCraft
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="extra.html" class="active">Extra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 140px 0 60px;">
+        <div class="container">
+            <h1>Extra Information</h1>
+            <p>Additional details about VedrunaCraft server and gameplay.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature fade-in">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Server Specs</h3>
+                    <p>Powered by high-performance hardware with dedicated resources for optimal gameplay experience.</p>
+                </div>
+                
+                <div class="feature fade-in">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Protection</h3>
+                    <p>Basic anti-cheat in place to prevent game-breaking exploits while maintaining anarchy spirit.</p>
+                </div>
+                
+                <div class="feature fade-in">
+                    <i class="fas fa-history"></i>
+                    <h3>World Management</h3>
+                    <p>Regular world backups. Map resets occur when needed, with ample warning to the community.</p>
+                </div>
+                
+                <div class="feature fade-in">
+                    <i class="fas fa-globe"></i>
+                    <h3>Global Access</h3>
+                    <p>Players from all around the world can connect and play with minimal latency issues.</p>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 4rem auto 0;">
+                <h2 class="section-title" style="font-size: 2rem;">What is Anarchy?</h2>
+                
+                <div class="card fade-in" style="margin-bottom: 2rem;">
+                    <h3>The Anarchy Experience</h3>
+                    <p>Anarchy servers like VedrunaCraft offer pure Minecraft survival with minimal rules. This means:</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>No protection from griefing or raiding</li>
+                        <li>No item or build restoration</li>
+                        <li>PvP is always enabled</li>
+                        <li>Players can form alliances or go solo</li>
+                        <li>The strongest (or sneakiest) survive</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in">
+                    <h3>Survival Tips</h3>
+                    <p>Surviving in an anarchy server requires different strategies:</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li><strong>Hide your base well:</strong> Use natural terrain to your advantage</li>
+                        <li><strong>Spread out resources:</strong> Don't keep all your valuables in one place</li>
+                        <li><strong>Trust carefully:</strong> Alliances can be broken at any time</li>
+                        <li><strong>Stay mobile:</strong> Have multiple bases in different locations</li>
+                        <li><strong>Play smart:</strong> Sometimes avoiding conflict is the best strategy</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 4rem;">
+                <h2 style="color: var(--light-green); margin-bottom: 1rem;">Ready to Join?</h2>
+                <p style="margin-bottom: 2rem; color: var(--text-gray);">
+                    Connect now and start your anarchy adventure today!
+                </p>
+                <a href="index.html#join" class="btn">
+                    <i class="fas fa-play-circle"></i> Join Server
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="color: var(--light-green); margin-bottom: 1rem;">VedrunaCraft</h3>
+                    <p style="color: var(--text-gray);">Survival Anarchy Minecraft Server</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://dsc.gg/vedrunacraft" target="_blank" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="mailto:info@vedrunacraft.net" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div>
+                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. All rights reserved.</p>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">Not affiliated with Mojang or Microsoft.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Fade in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.feature, .card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
