@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Reset i Estils Base */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ body {
     padding: 0 20px;
 }
 
-/* Header & Navigation */
+/* Capçalera i Navegació */
 header {
     background-color: rgba(18, 18, 18, 0.95);
     backdrop-filter: blur(10px);
@@ -94,7 +94,7 @@ nav {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Secció Hero */
 .hero {
     padding: 160px 0 80px;
     text-align: center;
@@ -126,10 +126,11 @@ nav {
     font-size: 1.2rem;
     font-weight: 600;
     display: inline-block;
-    margin: 1rem;
+    margin: 0.5rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .server-ip:hover {
@@ -137,7 +138,7 @@ nav {
     transform: translateY(-2px);
 }
 
-/* Sections */
+/* Seccions */
 .section {
     padding: 80px 0;
 }
@@ -149,7 +150,7 @@ nav {
     font-size: 2.5rem;
 }
 
-/* Cards */
+/* Targetes */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -177,7 +178,7 @@ nav {
     font-size: 1.5rem;
 }
 
-/* Buttons */
+/* Botons */
 .btn {
     display: inline-block;
     background: var(--primary-green);
@@ -189,6 +190,7 @@ nav {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin: 0.5rem;
 }
 
 .btn:hover {
@@ -207,7 +209,7 @@ nav {
     color: white;
 }
 
-/* Rules Page */
+/* Pàgina de Regles */
 .rules-list {
     max-width: 800px;
     margin: 0 auto;
@@ -242,37 +244,63 @@ nav {
     color: var(--text-light);
 }
 
-/* Contact Page */
-.contact-grid {
+/* Pàgina de Contacte (millorada) */
+.contact-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.contact-method {
+.contact-info {
     background: var(--card-bg);
     border-radius: 12px;
     padding: 2rem;
-    text-align: center;
-    border: 1px solid var(--border-color);
+}
+
+.contact-methods {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
 }
 
 .contact-method i {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--light-green);
-    margin-bottom: 1rem;
+    width: 40px;
+    text-align: center;
 }
 
-.contact-method h3 {
+.contact-method-content h4 {
     color: var(--accent-green);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+.contact-form-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.contact-form h3 {
+    color: var(--accent-green);
+    margin-bottom: 1.5rem;
 }
 
 .form-group {
@@ -283,49 +311,114 @@ nav {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--text-light);
+    font-weight: 500;
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    background: var(--card-bg);
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     color: var(--text-light);
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
 
-/* Extra Page */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
+/* Pàgina Extra */
+.extra-content {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.feature {
-    text-align: center;
-    padding: 2rem;
+.content-placeholder {
     background: var(--card-bg);
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    padding: 3rem;
+    text-align: center;
+    border: 2px dashed var(--border-color);
 }
 
-.feature i {
-    font-size: 2.5rem;
+.content-placeholder i {
+    font-size: 3rem;
     color: var(--light-green);
+    margin-bottom: 1.5rem;
+}
+
+.content-placeholder h3 {
+    color: var(--accent-green);
     margin-bottom: 1rem;
 }
 
-/* Footer */
+/* Servidors */
+.servers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.server-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.server-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--primary-green);
+}
+
+.server-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.2);
+}
+
+.server-card h3 {
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.server-features {
+    margin: 1.5rem 0;
+}
+
+.server-features li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.server-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--light-green);
+    font-weight: bold;
+}
+
+/* Peu de pàgina */
 footer {
     background: var(--darker-bg);
     padding: 3rem 0;
@@ -356,7 +449,7 @@ footer {
     color: var(--light-green);
 }
 
-/* Responsive Design */
+/* Responsiu */
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
@@ -391,13 +484,17 @@ footer {
         font-size: 2rem;
     }
 
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
 }
 
-/* Animations */
+/* Animacions */
 @keyframes fadeIn {
     from {
         opacity: 0;
