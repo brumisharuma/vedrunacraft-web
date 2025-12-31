@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VedrunaCraft - Minecraft Survival Anarchy Server</title>
+    <title>VedrunaCraft - Xarxa de Servidors Minecraft</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/minecraft-logo.png">
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Capçalera i Navegació -->
     <header>
         <nav class="container">
             <a href="index.html" class="logo">
@@ -22,113 +22,139 @@
             </button>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="rules.html">Rules</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="active">Inici</a></li>
+                <li><a href="rules.html">Regles</a></li>
+                <li><a href="contact.html">Contacte</a></li>
                 <li><a href="extra.html">Extra</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Secció Hero -->
     <section class="hero">
         <div class="container">
             <div class="fade-in">
                 <h1>VedrunaCraft</h1>
-                <p>Experience true freedom in our Survival Anarchy server. No rules, no restrictions - just pure Minecraft survival as it was meant to be played.</p>
+                <p>La teva xarxa de servidors Minecraft en català. Experimenta la supervivència pura o el caos total de l'anarquia.</p>
                 
                 <div style="margin: 2rem 0;">
-                    <button class="server-ip" onclick="copyToClipboard('wss://play.vedrunacraft.net')">
-                        <i class="fas fa-copy"></i> Copy Server IP: wss://play.vedrunacraft.net
-                    </button>
+                    <a href="#servidors" class="server-ip">
+                        <i class="fas fa-server"></i> Veure tots els servidors
+                    </a>
                 </div>
                 
                 <div style="margin-top: 2rem;">
-                    <a href="#join" class="btn">Join Now</a>
-                    <a href="rules.html" class="btn btn-secondary">Server Rules</a>
+                    <a href="#servidors" class="btn">Unir-me ara</a>
+                    <a href="rules.html" class="btn btn-secondary">Regles del servidor</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section" id="about">
+    <!-- Secció Servidors -->
+    <section class="section" id="servidors">
         <div class="container">
-            <h2 class="section-title">About VedrunaCraft</h2>
+            <h2 class="section-title">Els Nostres Servidors</h2>
+            <div class="servers-grid">
+                <div class="server-card fade-in">
+                    <h3>Servidor Survival</h3>
+                    <p>Experimenta el Minecraft clàssic amb una comunitat activa. Construcció, exploració i supervivència en un entorn controlat.</p>
+                    
+                    <div class="server-features">
+                        <ul>
+                            <li>Protecció de terrenys</li>
+                            <li>Economia amb diners</li>
+                            <li>Comunitat amigable</li>
+                            <li>Events regulars</li>
+                            <li>Sense greifing</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <button class="server-ip" onclick="copyToClipboard('survival.vedrunacraft.net')">
+                            <i class="fas fa-copy"></i> IP: survival.vedrunacraft.net
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="server-card fade-in">
+                    <h3>Servidor Anarquia</h3>
+                    <p>Cap regla, cap restricció. El servidor de pura anarquia on tot està permès. Només els més forts sobreviuen.</p>
+                    
+                    <div class="server-features">
+                        <ul>
+                            <li>Zero regles</li>
+                            <li>Greifing permès</li>
+                            <li>PvP sempre activat</li>
+                            <li>Cap protecció</li>
+                            <li>Supervivència extrema</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-top: 1.5rem;">
+                        <button class="server-ip" onclick="copyToClipboard('anarquia.vedrunacraft.net')">
+                            <i class="fas fa-copy"></i> IP: anarquia.vedrunacraft.net
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secció Característiques -->
+    <section class="section" style="background: var(--darker-bg);">
+        <div class="container">
+            <h2 class="section-title">Per què VedrunaCraft?</h2>
             <div class="cards">
                 <div class="card fade-in">
-                    <i class="fas fa-fist-raised" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
-                    <h3>True Anarchy</h3>
-                    <p>No rules, no bans. Play Minecraft the way you want. Grief, raid, and PvP without restrictions. Only your skills limit you.</p>
+                    <i class="fas fa-language" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
+                    <h3>Comunitat Catalana</h3>
+                    <p>Un servidor fet per i per a la comunitat catalana. Xateja i juga en la teva llengua.</p>
                 </div>
                 
                 <div class="card fade-in">
-                    <i class="fas fa-server" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
-                    <h3>24/7 Uptime</h3>
-                    <p>Our server is always online with 99.9% uptime. Play whenever you want, from anywhere in the world.</p>
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
+                    <h3>Estable i Segur</h3>
+                    <p>Infraestructura professional amb 99.9% d'uptime i protecció contra atacs.</p>
                 </div>
                 
                 <div class="card fade-in">
                     <i class="fas fa-users" style="font-size: 2rem; color: var(--light-green); margin-bottom: 1rem;"></i>
-                    <h3>Active Community</h3>
-                    <p>Join our growing community of anarchy players. Form alliances, start wars, or go solo - the choice is yours.</p>
+                    <h3>Comunitat Activa</h3>
+                    <p>Uneix-te a una comunitat vibrant de jugadors de Minecraft de tot Catalunya.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Join Section -->
-    <section class="section" id="join" style="background: var(--darker-bg);">
-        <div class="container">
-            <h2 class="section-title">How to Join</h2>
-            <div class="cards">
-                <div class="card fade-in">
-                    <h3>1. Use Eaglercraft</h3>
-                    <p>VedrunaCraft runs on Eaglercraft, allowing you to play directly in your browser without downloading Minecraft.</p>
-                </div>
-                
-                <div class="card fade-in">
-                    <h3>2. Connect to Server</h3>
-                    <p>Open Eaglercraft and connect to our server using the IP address:</p>
-                    <code style="background: var(--dark-bg); padding: 0.5rem 1rem; border-radius: 4px; display: block; margin: 1rem 0; color: var(--light-green);">wss://play.vedrunacraft.net</code>
-                </div>
-                
-                <div class="card fade-in">
-                    <h3>3. Start Playing</h3>
-                    <p>Once connected, you're ready to play! Survive, build, raid, and conquer in our anarchy world.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Peu de pàgina -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div>
                     <h3 style="color: var(--light-green); margin-bottom: 1rem;">VedrunaCraft</h3>
-                    <p style="color: var(--text-gray);">Survival Anarchy Minecraft Server</p>
+                    <p style="color: var(--text-gray);">Xarxa de servidors Minecraft en català</p>
                 </div>
                 
                 <div class="social-links">
                     <a href="https://dsc.gg/vedrunacraft" target="_blank" title="Discord">
                         <i class="fab fa-discord"></i>
                     </a>
-                    <a href="mailto:info@vedrunacraft.net" title="Email">
+                    <a href="mailto:info@vedrunacraft.net" title="Correu electrònic">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
                 
                 <div>
-                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. All rights reserved.</p>
-                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">Not affiliated with Mojang or Microsoft.</p>
+                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. Tots els drets reservats.</p>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">No afiliat amb Mojang o Microsoft.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Menú mòbil
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
         
@@ -136,29 +162,33 @@
             navLinks.classList.toggle('active');
         });
         
-        // Close menu when clicking a link
+        // Tanca el menú en clicar un enllaç
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
             });
         });
         
-        // Copy IP to clipboard
+        // Copia IP al porta-retalls
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                const button = document.querySelector('.server-ip');
-                const originalHTML = button.innerHTML;
-                button.innerHTML = '<i class="fas fa-check"></i> IP Copied!';
-                button.style.background = 'var(--secondary-green)';
-                
-                setTimeout(() => {
-                    button.innerHTML = originalHTML;
-                    button.style.background = '';
-                }, 2000);
+                const buttons = document.querySelectorAll('.server-ip');
+                buttons.forEach(button => {
+                    if (button.textContent.includes(text)) {
+                        const originalHTML = button.innerHTML;
+                        button.innerHTML = '<i class="fas fa-check"></i> IP Copiada!';
+                        button.style.background = 'var(--secondary-green)';
+                        
+                        setTimeout(() => {
+                            button.innerHTML = originalHTML;
+                            button.style.background = '';
+                        }, 2000);
+                    }
+                });
             });
         }
         
-        // Fade in animation on scroll
+        // Animació d'aparició
         const observerOptions = {
             threshold: 0.1
         };
@@ -171,7 +201,7 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.card, .feature, .contact-method').forEach(el => {
+        document.querySelectorAll('.card, .server-card').forEach(el => {
             observer.observe(el);
         });
     </script>
