@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Rules - VedrunaCraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/minecraft-logo.png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube logo-icon"></i>
+                VedrunaCraft
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html" class="active">Rules</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 140px 0 60px;">
+        <div class="container">
+            <h1>Server Rules</h1>
+            <p>While we're an anarchy server, we have a few basic rules to ensure fair play for everyone.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="rules-list">
+                <div class="rule-category fade-in">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Zero Tolerance Rules</h3>
+                    <ul>
+                        <li><strong>No hacking/cheating:</strong> While we have minimal anti-cheat, blatant hacking will result in removal</li>
+                        <li><strong>No DDoS threats/attacks:</strong> Immediate permanent ban for any DDoS-related activities</li>
+                        <li><strong>No doxxing:</strong> Sharing personal information of other players is strictly prohibited</li>
+                        <li><strong>No lag machines:</strong> Intentional server lag or crash attempts are not allowed</li>
+                    </ul>
+                </div>
+                
+                <div class="rule-category fade-in">
+                    <h3><i class="fas fa-user-shield"></i> Fair Play Guidelines</h3>
+                    <ul>
+                        <li>Use of client-side mods is allowed (Optifine, minimaps, etc.)</li>
+                        <li>Autoclickers are permitted but keep it reasonable</li>
+                        <li>Alts are allowed but may be limited during high player counts</li>
+                        <li>Base griefing and PvP are encouraged - this is anarchy!</li>
+                    </ul>
+                </div>
+                
+                <div class="rule-category fade-in">
+                    <h3><i class="fas fa-comments"></i> Discord Rules</h3>
+                    <ul>
+                        <li>No spam in any text channels</li>
+                        <li>Keep discussion respectful (minimal toxicity)</li>
+                        <li>No NSFW content in non-NSFW channels</li>
+                        <li>English is the primary language for public channels</li>
+                    </ul>
+                </div>
+                
+                <div class="rule-category fade-in">
+                    <h3><i class="fas fa-info-circle"></i> Important Notes</h3>
+                    <ul>
+                        <li>Rules are subject to change at admin discretion</li>
+                        <li>Admins have final say in all rule interpretations</li>
+                        <li>No refunds for donations (if applicable)</li>
+                        <li>Your continued play means you accept all rules</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--light-green); font-size: 1.2rem;">
+                    <i class="fas fa-exclamation-circle"></i> Remember: This is an anarchy server. 
+                    Most things are allowed, but these few rules keep the server playable for everyone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="color: var(--light-green); margin-bottom: 1rem;">VedrunaCraft</h3>
+                    <p style="color: var(--text-gray);">Survival Anarchy Minecraft Server</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://dsc.gg/vedrunacraft" target="_blank" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="mailto:info@vedrunacraft.net" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div>
+                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. All rights reserved.</p>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">Not affiliated with Mojang or Microsoft.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Fade in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.rule-category').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
