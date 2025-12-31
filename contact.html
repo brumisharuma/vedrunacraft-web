@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - VedrunaCraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/minecraft-logo.png">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-cube logo-icon"></i>
+                VedrunaCraft
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="extra.html">Extra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 140px 0 60px;">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Need help? Have questions? Reach out to us through these methods.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-method fade-in">
+                    <i class="fab fa-discord"></i>
+                    <h3>Discord</h3>
+                    <p>Join our Discord server for instant support, community chat, and announcements.</p>
+                    <a href="https://dsc.gg/vedrunacraft" target="_blank" class="btn" style="margin-top: 1rem;">
+                        <i class="fab fa-discord"></i> Join Discord
+                    </a>
+                </div>
+                
+                <div class="contact-method fade-in">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>For formal inquiries, business matters, or serious issues, contact us via email.</p>
+                    <a href="mailto:info@vedrunacraft.net" class="btn btn-secondary" style="margin-top: 1rem;">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
+                </div>
+                
+                <div class="contact-method fade-in">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>In-Game</h3>
+                    <p>Connect to our server and ask for help from online staff members.</p>
+                    <code style="background: var(--dark-bg); padding: 0.5rem 1rem; border-radius: 4px; display: block; margin: 1rem 0; color: var(--light-green);">
+                        wss://play.vedrunacraft.net
+                    </code>
+                </div>
+            </div>
+            
+            <div style="max-width: 800px; margin: 4rem auto 0;">
+                <h2 class="section-title" style="font-size: 2rem;">FAQ</h2>
+                
+                <div class="card fade-in" style="margin-bottom: 1rem;">
+                    <h3>How do I report a player?</h3>
+                    <p>Join our Discord and provide evidence (screenshots/video) in the appropriate channel. Remember, this is an anarchy server - most things are allowed!</p>
+                </div>
+                
+                <div class="card fade-in" style="margin-bottom: 1rem;">
+                    <h3>Can I get unbanned?</h3>
+                    <p>Appeals are handled on a case-by-case basis. Contact us via Discord or email with your username and reason for appeal.</p>
+                </div>
+                
+                <div class="card fade-in">
+                    <h3>Server is down, what do I do?</h3>
+                    <p>Check our Discord for status updates. We aim for 24/7 uptime, but occasional maintenance may be required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="color: var(--light-green); margin-bottom: 1rem;">VedrunaCraft</h3>
+                    <p style="color: var(--text-gray);">Survival Anarchy Minecraft Server</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://dsc.gg/vedrunacraft" target="_blank" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="mailto:info@vedrunacraft.net" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                
+                <div>
+                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. All rights reserved.</p>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">Not affiliated with Mojang or Microsoft.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Fade in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.contact-method, .card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
