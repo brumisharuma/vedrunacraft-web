@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - VedrunaCraft</title>
+    <title>Contacte - VedrunaCraft</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/48/minecraft-logo.png">
@@ -21,9 +21,9 @@
             </button>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="rules.html">Rules</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="rules.html">Regles</a></li>
+                <li><a href="contact.html" class="active">Contacte</a></li>
                 <li><a href="extra.html">Extra</a></li>
             </ul>
         </nav>
@@ -31,58 +31,144 @@
 
     <section class="hero" style="padding: 140px 0 60px;">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Need help? Have questions? Reach out to us through these methods.</p>
+            <h1>Contacte amb Nosaltres</h1>
+            <p>Tens alguna pregunta, suggeriment o problema? Contacta amb nosaltres!</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-method fade-in">
-                    <i class="fab fa-discord"></i>
-                    <h3>Discord</h3>
-                    <p>Join our Discord server for instant support, community chat, and announcements.</p>
-                    <a href="https://dsc.gg/vedrunacraft" target="_blank" class="btn" style="margin-top: 1rem;">
-                        <i class="fab fa-discord"></i> Join Discord
-                    </a>
+            <div class="contact-container">
+                <!-- Informació de contacte -->
+                <div class="contact-info fade-in">
+                    <h2 style="color: var(--light-green); margin-bottom: 2rem;">Mètodes de Contacte</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fab fa-discord"></i>
+                            <div class="contact-method-content">
+                                <h4>Discord</h4>
+                                <p>El millor lloc per obtenir ajuda ràpida i parlar amb la comunitat.</p>
+                                <a href="https://dsc.gg/vedrunacraft" target="_blank" style="color: var(--light-green); text-decoration: none; display: inline-block; margin-top: 0.5rem;">
+                                    <i class="fab fa-discord"></i> Unir-me al Discord
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-method-content">
+                                <h4>Correu Electrònic</h4>
+                                <p>Per assumptes formals, col·laboracions o problemes greus.</p>
+                                <a href="mailto:info@vedrunacraft.net" style="color: var(--light-green); text-decoration: none; display: inline-block; margin-top: 0.5rem;">
+                                    <i class="fas fa-envelope"></i> info@vedrunacraft.net
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="contact-method-content">
+                                <h4>Dins del Joc</h4>
+                                <p>Parla directament amb els administradors mentre jugues.</p>
+                                <div style="margin-top: 0.5rem;">
+                                    <code style="background: var(--dark-bg); padding: 0.5rem; border-radius: 4px; color: var(--light-green);">
+                                        /msg Admin [missatge]
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                        <h4 style="color: var(--accent-green); margin-bottom: 1rem;">
+                            <i class="fas fa-clock"></i> Temps de Resposta
+                        </h4>
+                        <p style="color: var(--text-gray); font-size: 0.9rem;">
+                            <strong>Discord:</strong> Normalment en menys de 1 hora<br>
+                            <strong>Email:</strong> Dins de 24-48 hores<br>
+                            <strong>Dins del joc:</strong> Depèn de la disponibilitat dels staff
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="contact-method fade-in">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>For formal inquiries, business matters, or serious issues, contact us via email.</p>
-                    <a href="mailto:info@vedrunacraft.net" class="btn btn-secondary" style="margin-top: 1rem;">
-                        <i class="fas fa-envelope"></i> Send Email
-                    </a>
-                </div>
-                
-                <div class="contact-method fade-in">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>In-Game</h3>
-                    <p>Connect to our server and ask for help from online staff members.</p>
-                    <code style="background: var(--dark-bg); padding: 0.5rem 1rem; border-radius: 4px; display: block; margin: 1rem 0; color: var(--light-green);">
-                        wss://play.vedrunacraft.net
-                    </code>
+                <!-- Formulari de contacte -->
+                <div class="contact-form-container fade-in">
+                    <div class="contact-form">
+                        <h3>Formulari de Contacte</h3>
+                        <p style="color: var(--text-gray); margin-bottom: 1.5rem;">Envia'ns un missatge directe</p>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nom o Nickname *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correu Electrònic *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Assumpte *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecciona un assumpte</option>
+                                    <option value="report">Reportar un jugador</option>
+                                    <option value="appeal">Apel·lar un ban</option>
+                                    <option value="bug">Reportar un bug</option>
+                                    <option value="suggestion">Suggeriment</option>
+                                    <option value="collab">Col·laboració</option>
+                                    <option value="other">Altres</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="server">Servidor afectat</label>
+                                <select id="server" name="server">
+                                    <option value="">Selecciona un servidor</option>
+                                    <option value="survival">Survival</option>
+                                    <option value="anarchy">Anarquia</option>
+                                    <option value="both">Tots dos</option>
+                                    <option value="none">Cap</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Missatge *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Explica'ns el teu problema o suggeriment..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Enviar Missatge
+                            </button>
+                            
+                            <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 1rem;">
+                                * Camps obligatoris
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
             
+            <!-- FAQ -->
             <div style="max-width: 800px; margin: 4rem auto 0;">
-                <h2 class="section-title" style="font-size: 2rem;">FAQ</h2>
+                <h2 class="section-title" style="font-size: 2rem;">Preguntes Freqüents</h2>
                 
-                <div class="card fade-in" style="margin-bottom: 1rem;">
-                    <h3>How do I report a player?</h3>
-                    <p>Join our Discord and provide evidence (screenshots/video) in the appropriate channel. Remember, this is an anarchy server - most things are allowed!</p>
-                </div>
-                
-                <div class="card fade-in" style="margin-bottom: 1rem;">
-                    <h3>Can I get unbanned?</h3>
-                    <p>Appeals are handled on a case-by-case basis. Contact us via Discord or email with your username and reason for appeal.</p>
-                </div>
-                
-                <div class="card fade-in">
-                    <h3>Server is down, what do I do?</h3>
-                    <p>Check our Discord for status updates. We aim for 24/7 uptime, but occasional maintenance may be required.</p>
+                <div class="cards">
+                    <div class="card fade-in">
+                        <h3><i class="fas fa-user-slash"></i> Com puc reportar un jugador?</h3>
+                        <p>Uneix-te al nostre Discord i publica proves (captures de pantalla/vídeo) al canal adequat. Per al servidor d'anarquia, recorda que gairebé tot està permès.</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <h3><i class="fas fa-gavel"></i> Puc apel·lar un ban?</h3>
+                        <p>Sí, els bans es poden apel·lar. Contacta'ns via Discord o email amb el teu nom d'usuari i les raons per a l'apel·lació.</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <h3><i class="fas fa-server"></i> El servidor està caigut, què faig?</h3>
+                        <p>Consulta el nostre Discord per a actualitzacions d'estat. Intentem mantenir els servidors 24/7, però de vegades es requereix manteniment.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,28 +179,28 @@
             <div class="footer-content">
                 <div>
                     <h3 style="color: var(--light-green); margin-bottom: 1rem;">VedrunaCraft</h3>
-                    <p style="color: var(--text-gray);">Survival Anarchy Minecraft Server</p>
+                    <p style="color: var(--text-gray);">Xarxa de servidors Minecraft en català</p>
                 </div>
                 
                 <div class="social-links">
                     <a href="https://dsc.gg/vedrunacraft" target="_blank" title="Discord">
                         <i class="fab fa-discord"></i>
                     </a>
-                    <a href="mailto:info@vedrunacraft.net" title="Email">
+                    <a href="mailto:info@vedrunacraft.net" title="Correu electrònic">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
                 
                 <div>
-                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. All rights reserved.</p>
-                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">Not affiliated with Mojang or Microsoft.</p>
+                    <p style="color: var(--text-gray);">&copy; 2024 VedrunaCraft. Tots els drets reservats.</p>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem;">No afiliat amb Mojang o Microsoft.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Menú mòbil
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
         
@@ -128,7 +214,17 @@
             });
         });
         
-        // Fade in animation
+        // Formulari de contacte
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Aquí aniria el codi per enviar el formulari
+            alert('Gràcies pel teu missatge! Ens posarem en contacte amb tu aviat.');
+            contactForm.reset();
+        });
+        
+        // Animació d'aparició
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -137,7 +233,7 @@
             });
         }, { threshold: 0.1 });
         
-        document.querySelectorAll('.contact-method, .card').forEach(el => {
+        document.querySelectorAll('.contact-info, .contact-form-container, .card').forEach(el => {
             observer.observe(el);
         });
     </script>
